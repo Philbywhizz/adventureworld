@@ -3,6 +3,11 @@
 --
 
 --
+-- Globals
+--
+GameVersion = "0.0"
+
+--
 -- Love callback functions
 --
 function love.keypressed(key)

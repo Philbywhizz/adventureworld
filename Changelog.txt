@@ -1,0 +1,8 @@
+Adventureworld Changelog
+========================
+
+0.0
+---
+* Basic shell (just shows a blank screen).
+* ESC quits.
+* Added in 9 map data files.
