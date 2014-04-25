@@ -1,6 +1,8 @@
 --
 -- Title Screen
 --
+require "state.instructions"
+
 title = {}
 
 function title:init()
@@ -22,6 +24,7 @@ end
 function title:keypressed(key)
 	if key == "y" then
 		-- switch to the instructions screen
+		Gamestate.switch(instructions)
 	elseif key == "n" then
 		-- switch to the start of the game
 	end

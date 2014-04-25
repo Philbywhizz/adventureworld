@@ -4,6 +4,7 @@
 Gamestate = require "libs.hump.gamestate"
 
 require "state.title"
+
 --
 -- Globals
 --
