@@ -1,0 +1,15 @@
+Credits
+=======
+
+Original Authors
+----------------
+* Phil Howlett (Philbywhizz)
+	(https://github.com/Philbywhizz/moviemonsters)
+
+* John Zaitseff
+	- Co-Author of the original Microbee game
+
+Libraries
+---------
+* HUMP library by Matthias Richter
+	(http://vrld.github.io/hump/)
