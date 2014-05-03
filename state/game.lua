@@ -6,6 +6,8 @@ game = {}
 
 local sti = require "libs.sti"
 
+player = {}
+
 function game:init()
 	gameFont = love.graphics.newImageFont("res/font.png",
 		" abcdefghijklmnopqrstuvwxyz" ..
@@ -14,6 +16,8 @@ function game:init()
 
 	map = sti.new("maps/adventureworld")
 	currentMap = love.math.random(2, 9) -- map1 is special
+	player.x = love.math.random(2, 63)
+	player.y = love.math.random(2, 14)
 end
 
 function game:enter()
