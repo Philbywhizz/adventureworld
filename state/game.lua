@@ -24,7 +24,7 @@ function game:init()
 	repeat
 		x = love.math.random(2, 63)
 		y = love.math.random(2, 14)
-	until safeTile(x, y) -- checks for a safe tile
+	until safeStartingTile(x, y) -- checks for a safe tile
 	player:setXY(x, y)
 end
 
@@ -43,6 +43,15 @@ function getTile(x, y)
 end
 
 function safeTile(x, y)
+	-- returns true if the current tile is safe
+	if getTile(x,y) == "BRICKS" or getTile(x,y) == "MOUNTAINS" then
+		return false
+	else
+		return true
+	end
+end
+
+function safeStartingTile(x, y)
 	-- returns true if the current tile is safe
 	if getTile(x,y) == "BRICKS" or getTile(x,y) == "MOUNTAINS" or getTile(x,y) == "GATE" or getTile(x,y) == "EXIT" then
 		return false
@@ -65,14 +74,26 @@ end
 function game:keypressed(key)
 	if key == "a" or key == "up" then
 		-- up
+		if safeTile(player:getX(), player:getY() - 1) then
+			player:setXY(player:getX(), player:getY() - 1)
+		end
 	end
 	if key == "z" or key == "down" then
 		-- down
+		if safeTile(player:getX(), player:getY() + 1) then
+			player:setXY(player:getX(), player:getY() + 1)
+		end
 	end
 	if key == "," or key == "left" then
 		-- left
+		if safeTile(player:getX() - 1, player:getY()) then
+			player:setXY(player:getX() - 1, player:getY())
+		end
 	end
 	if key == "." or key == "right" then
+		if safeTile(player:getX() + 1, player:getY()) then
+			player:setXY(player:getX() + 1, player:getY())
+		end
 	end
 
 	if key == "h" then

@@ -33,6 +33,14 @@ function Player:getXY()
 	return self.x, self.y
 end
 
+function Player:getX()
+	return self.x
+end
+
+function Player:getY()
+	return self.y
+end
+
 function Player:update(dt)
 	-- flash the player if required
 	self.flash = self.flash + dt
