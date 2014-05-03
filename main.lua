@@ -3,6 +3,7 @@
 --
 
 -- Setup
+Class = require "libs.hump.class"
 Gamestate = require "libs.hump.gamestate"
 lovebird = require "libs.lovebird"
 inspect = require "libs.inspect"
