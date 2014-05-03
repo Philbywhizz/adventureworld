@@ -59,7 +59,14 @@ function game:keypressed(key)
 	end
 
 	if key == "h" then
-		-- push the help screen
+		-- Help screen
 		Gamestate.push(help)
+	end
+
+	if key == "1" then
+		-- debug
+		print("Player:")
+		print(inspect(player))
+		print(getTile(player.x, player.y))
 	end
 end
