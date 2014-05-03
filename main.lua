@@ -8,6 +8,7 @@ lovebird = require "libs.lovebird"
 inspect = require "libs.inspect"
 require "data"
 
+require "state.game"
 require "state.instructions"
 require "state.title"
 require "state.help"
