@@ -12,7 +12,7 @@ function game:init()
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ0" ..
 		"123456789.,!?-+/():;%&`'*#=[]\"")
 
-	map = sti.new("maps/map2")
+	map = sti.new("maps/adventureworld")
 end
 
 function game:enter()
@@ -32,6 +32,7 @@ function game:draw()
 end
 
 function game:update(dt)
+	map:update(dt)
 end
 
 function game:keypressed(key)
