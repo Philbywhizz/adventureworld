@@ -53,3 +53,27 @@ weapons = {
 	{name="Two handed warhammer", strength=25, value=2500},
 	{name="'The stinging sword'", strength=50, value=3500},
 }
+
+armour = {
+	{name="Bare back", ac=25, value=0},
+	{name="Shirt", ac=24, value=100},
+	{name="Helm", ac=23, value=200},
+	{name="Shield only", ac=22, value=300},
+	{name="Leather", ac=21, value=400},
+	{name="Ring mail", ac=20, value=500},
+	{name="Scale mail", ac=19, value=600},
+	{name="Chain mail", ac=18, value=700},
+	{name="Splint mail", ac=17, value=800},
+	{name="Plate mail", ac=16, value=900},
+	{name="Plate and shield", ac=15, value=1000},
+	{name="Plate +2", ac=14, value=1100},
+	{name="Plate +5", ac=13, value=1200},
+	{name="Full suit plate", ac=12, value=1300},
+	{name="Full suit plate +2", ac=11, value=1400},
+	{name="Full suit plate +3", ac=10, value=1500},
+	{name="Full suit plate +4", ac=9, value=1600},
+	{name="Full suit plate +5", ac=8, value=1700},
+	{name="Full suit plate +6", ac=7, value=1800},
+	{name="Full suit plate +7", ac=6, value=1900},
+	{name="Full suit plate +10", ac=3, value=2000}
+}
