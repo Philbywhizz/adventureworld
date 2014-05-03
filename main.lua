@@ -3,6 +3,7 @@
 --
 Gamestate = require "libs.hump.gamestate"
 
+inspect = require "libs.inspect"
 require "data"
 
 require "state.instructions"
