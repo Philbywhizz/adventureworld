@@ -21,7 +21,61 @@ function Player:init()
 		love.graphics.newImage("res/person.png"),
 		love.graphics.newImage("res/iperson.png")
 	}
+	self.name = "Nobody"
+	self.level = 1
+	self.maxHP = math.floor(self.level) * 100
+	self.hp = self.maxHP
+	self.score = 0
+	self.cash = 0
+	self.bank = 0
+	self.armour = 1
+	self.weapon = 1
+	self.food = 20
+	self.days = 0
+end
 
+function Player:getName()
+	return self.name
+end
+
+function Player:getLevel()
+	if self.level > #titles then
+		return #titles
+	else
+		return self.level
+	end
+end
+
+function Player:getScore()
+	return self.score
+end
+
+function Player:getCashBalance()
+	return self.cash
+end
+
+function Player:getBankBalance()
+	return self.bank
+end
+
+function Player:getArmour()
+	return self.armour
+end
+
+function Player:getWeapon()
+	return self.weapon
+end
+
+function Player:getHealthPercent()
+	return (self.hp / self.maxHP) * 100
+end
+
+function Player:getFood()
+	return self.food
+end
+
+function Player:getDays()
+	return self.days
 end
 
 function Player:setXY(x, y)
