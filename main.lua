@@ -1,8 +1,10 @@
 --
 -- Adventureworld
 --
-Gamestate = require "libs.hump.gamestate"
 
+-- SEtup
+Gamestate = require "libs.hump.gamestate"
+lovebird = require "libs.lovebird"
 inspect = require "libs.inspect"
 require "data"
 
@@ -26,6 +28,7 @@ function love.draw()
 end
 
 function love.update(dt)
+	lovebird.update(dt)
 	Gamestate.update(dt)
 end
 
