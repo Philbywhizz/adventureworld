@@ -1,3 +1,35 @@
 --
 -- Game Data
 --
+ranks = {
+	"Serf",
+	"Greenhorn",
+	"Amateur",
+	"Raw recruit",
+	"Beginner",
+	"Trainee fighter",
+	"Fighter",
+	"Experienced fighter",
+	"Expert fighter",
+	"Master fighter",
+	"Trainee instructor",
+	"Instructor",
+	"Experienced instructor",
+	"Seasoned instructor",
+	"Expert Iistructor",
+	"Brave instructor",
+	"Master instructor",
+	"Warrior",
+	"Seasoned warrior",
+	"Brave warrior",
+	"Master warrior",
+	"Champion",
+	"Brave champion",
+	"Master champion",
+	"Commando",
+	"Experienced commando",
+	"Seasoned commando",
+	"Expert commando",
+	"Brave commando",
+	"Master commando"
+}
