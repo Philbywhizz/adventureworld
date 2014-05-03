@@ -16,8 +16,13 @@ function game:init()
 
 	map = sti.new("maps/adventureworld")
 	currentMap = love.math.random(2, 9) -- map1 is special
-	player.x = love.math.random(2, 63)
-	player.y = love.math.random(2, 14)
+
+	-- Set the player to a random location
+	repeat
+		player.x = love.math.random(2, 63)
+		player.y = love.math.random(2, 14)
+	until safeTile(player.x, player.y) -- checks for a safe tile
+
 end
 
 function game:enter()
@@ -29,9 +34,18 @@ local function center(line, text)
 	love.graphics.printf(text, 0, 0 + (24 * line), love.graphics.getWidth(), "center")
 end
 
-local function getTile(x, y)
+function getTile(x, y)
 	-- returns the tile type based on the x,y coordinate
 	return tiles[map.layers[currentMap].data[y][x].gid]
+end
+
+function safeTile(x, y)
+	-- returns true if the current tile is safe
+	if getTile(x,y) == "BRICKS" or getTile(x,y) == "MOUNTAINS" or getTile(x,y) == "GATE" or getTile(x,y) == "EXIT" then
+		return false
+	else
+		return true
+	end
 end
 
 function game:draw()
