@@ -118,3 +118,20 @@ food = {
 	{name="Healing Potion III", value=600},
 	{name="Healing Potion IV", value=700},
 }
+
+tiles = {
+	"BRICKS",
+	"WOODS",
+	"MOUNTAINS",
+	"PATH",
+	"SWAMP",
+	"TOWN",
+	"PERSON",
+	"iPERSON",
+	"GATE",
+	"EXIT",
+	"PORTAL",
+	"FOREST",
+	"HILLS",
+	"LAMP"
+}
