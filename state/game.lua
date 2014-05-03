@@ -41,6 +41,18 @@ function game:update(dt)
 end
 
 function game:keypressed(key)
+	if key == "a" then
+		-- up
+	end
+	if key == "z" then
+		-- down
+	end
+	if key == "," then
+		-- left
+	end
+	if key == "." then
+	end
+
 	if key == "h" then
 		-- push the help screen
 		Gamestate.push(help)
