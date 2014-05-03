@@ -29,6 +29,11 @@ local function center(line, text)
 	love.graphics.printf(text, 0, 0 + (24 * line), love.graphics.getWidth(), "center")
 end
 
+local function getTile(x, y)
+	-- returns the tile type based on the x,y coordinate
+	return tiles[map.layers[currentMap].data[y][x].gid]
+end
+
 function game:draw()
 	love.graphics.setColor(255, 255, 255) -- white
 	center(10, "This is the game screen")
