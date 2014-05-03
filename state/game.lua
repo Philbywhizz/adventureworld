@@ -69,17 +69,48 @@ end
 function newMap()
 	-- First switch the player to the other side of the screen
 	local direction = player:flip()
-	print(direction)
-	nextMap = currentMap
-	-- This is messy
+	local nextMap = currentMap
+	-- This is messy, but it works. Should look at putting this into a table.
 	if currentMap == 2 then
+		if direction == "NORTH" then nextMap = 8 end
+		if direction == "SOUTH" then nextMap = 4 end
+		if direction == "EAST" then nextMap = 9 end
+		if direction == "WEST" then nextMap = 7 end
 	elseif currentMap == 3 then
+		if direction == "NORTH" then nextMap = 6 end
+		if direction == "SOUTH" then nextMap = 7 end
+		if direction == "EAST" then nextMap = 6 end
+		if direction == "WEST" then nextMap = 5 end
 	elseif currentMap == 4 then
+		if direction == "NORTH" then nextMap = 2 end
+		if direction == "SOUTH" then nextMap = 5 end
+		if direction == "EAST" then nextMap = 5 end
+		if direction == "WEST" then nextMap = 6 end
 	elseif currentMap == 5 then
+		if direction == "NORTH" then nextMap = 4 end
+		if direction == "SOUTH" then nextMap = 8 end
+		if direction == "EAST" then nextMap = 3 end
+		if direction == "WEST" then nextMap = 4 end
 	elseif currentMap == 6 then
+		if direction == "NORTH" then nextMap = 7 end
+		if direction == "SOUTH" then nextMap = 3 end
+		if direction == "EAST" then nextMap = 4 end
+		if direction == "WEST" then nextMap = 3 end
 	elseif currentMap == 7 then
+		if direction == "NORTH" then nextMap = 3 end
+		if direction == "SOUTH" then nextMap = 6 end
+		if direction == "EAST" then nextMap = 2 end
+		if direction == "WEST" then nextMap = 9 end
 	elseif currentMap == 8 then
+		if direction == "NORTH" then nextMap = 5 end
+		if direction == "SOUTH" then nextMap = 2 end
+		if direction == "EAST" then nextMap = 8 end
+		if direction == "WEST" then nextMap = 8 end
 	elseif currentMap == 9 then
+		if direction == "NORTH" then nextMap = 1 end
+		if direction == "SOUTH" then nextMap = 5 end
+		if direction == "EAST" then nextMap = 7 end
+		if direction == "WEST" then nextMap = 2 end
 	end
 
 	return nextMap
@@ -128,8 +159,8 @@ function game:keypressed(key)
 	end
 	if key == "1" then
 		-- debug
-		print("Player:")
-		print(inspect(player))
-		print(getTile(player:getXY()))
+		print("DEBUG:")
+		print("- Current Tile:"..getTile(player:getXY()))
+		print("- Current Map #"..currentMap)
 	end
 end
