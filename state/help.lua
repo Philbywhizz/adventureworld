@@ -19,11 +19,12 @@ function help:draw()
 	love.graphics.setColor(255, 255, 255) -- white
 	love.graphics.setFont(helpFont)
 	center(1, "HELP SCREEN")
+	center(10, "TODO")
 	center(20, "Press any key to continue")
 end
 
 function help:keypressed(key)
 	if key then
-		-- switch to the start of the game
+		Gamestate.pop()
 	end
 end

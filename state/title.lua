@@ -26,5 +26,6 @@ function title:keypressed(key)
 		Gamestate.switch(instructions)
 	elseif key == "n" then
 		-- switch to the start of the game
+		Gamestate.switch(game)
 	end
 end

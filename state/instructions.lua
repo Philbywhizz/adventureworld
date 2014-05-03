@@ -40,6 +40,6 @@ end
 
 function instructions:keypressed(key)
 	if key then
-		Gamestate.switch(help)
+		Gamestate.switch(game)
 	end
 end

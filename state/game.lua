@@ -11,6 +11,10 @@ function game:init()
 		"123456789.,!?-+/():;%&`'*#=[]\"")
 end
 
+function game:enter()
+	Gamestate.push(help)
+end
+
 local function center(line, text)
 	love.graphics.printf(text, 0, 0 + (24 * line), love.graphics.getWidth(), "center")
 end
@@ -26,7 +30,7 @@ end
 
 function game:keypressed(key)
 	if key == "h" then
-		-- switch to the help screen screen
+		-- push the help screen
 		Gamestate.push(help)
 	end
 end
