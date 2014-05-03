@@ -18,7 +18,7 @@ function game:init()
 
 	map = sti.new("maps/adventureworld")
 	currentMap = love.math.random(2, 9) -- map1 is special
-	print("CURRENT MAP #"..currentMap)
+
 	-- Set the player to a random location
 	local x, y
 	repeat
@@ -69,9 +69,8 @@ end
 function newMap()
 	-- First switch the player to the other side of the screen
 	local direction = player:flip()
-	print(direction)
-	nextMap = currentMap
-	-- This is messy
+	local nextMap = currentMap
+	-- This is messy, but it works. Should look at putting this into a table.
 	if currentMap == 2 then
 		if direction == "NORTH" then nextMap = 8 end
 		if direction == "SOUTH" then nextMap = 4 end
@@ -121,7 +120,6 @@ function game:update(dt)
 	map:update(dt)
 	if getTile(player:getXY()) == "EXIT" then
 		currentMap = newMap()
-		print("SWITCHING TO MAP #"..currentMap)
 	end
 	player:update(dt)
 end
@@ -161,8 +159,8 @@ function game:keypressed(key)
 	end
 	if key == "1" then
 		-- debug
-		print("Player:")
-		print(inspect(player))
-		print(getTile(player:getXY()))
+		print("DEBUG:")
+		print("- Current Tile:"..getTile(player:getXY()))
+		print("- Current Map #"..currentMap)
 	end
 end
