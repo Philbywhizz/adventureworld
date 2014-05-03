@@ -33,3 +33,23 @@ ranks = {
 	"Brave commando",
 	"Master commando"
 }
+
+weapons = {
+	{name="Bare hands", strenth=1, value=0},
+	{name="Dagger", strength=2, value=100},
+	{name="Knife", strength=3, value=200},
+	{name="Axe", strength=4, value=300},
+	{name="Spear", strength=5, value=400},
+	{name="Club", strength=6, value=500},
+	{name="Short sword", strength=7, value=600},
+	{name="Normal sword", strength=8, value=700},
+	{name="Long spear", strength=9, value=800},
+	{name="Trident", strength=10, value=900},
+	{name="Long sword", strength=11, value=1000},
+	{name="Battle ace", strength=12, value=1100},
+	{name="Morning star", strength=16, value=1500},
+	{name="Mace", strength=18, value=1700},
+	{name="Two handed sword", strength=20, value=2000},
+	{name="Two handed warhammer", strength=25, value=2500},
+	{name="'The stinging sword'", strength=50, value=3500},
+}
