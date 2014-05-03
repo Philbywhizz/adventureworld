@@ -18,7 +18,7 @@ function game:init()
 
 	map = sti.new("maps/adventureworld")
 	currentMap = love.math.random(2, 9) -- map1 is special
-
+	print("CURRENT MAP #"..currentMap)
 	-- Set the player to a random location
 	local x, y
 	repeat
@@ -73,13 +73,45 @@ function newMap()
 	nextMap = currentMap
 	-- This is messy
 	if currentMap == 2 then
+		if direction == "NORTH" then nextMap = 8 end
+		if direction == "SOUTH" then nextMap = 4 end
+		if direction == "EAST" then nextMap = 9 end
+		if direction == "WEST" then nextMap = 7 end
 	elseif currentMap == 3 then
+		if direction == "NORTH" then nextMap = 6 end
+		if direction == "SOUTH" then nextMap = 7 end
+		if direction == "EAST" then nextMap = 6 end
+		if direction == "WEST" then nextMap = 5 end
 	elseif currentMap == 4 then
+		if direction == "NORTH" then nextMap = 2 end
+		if direction == "SOUTH" then nextMap = 5 end
+		if direction == "EAST" then nextMap = 5 end
+		if direction == "WEST" then nextMap = 6 end
 	elseif currentMap == 5 then
+		if direction == "NORTH" then nextMap = 4 end
+		if direction == "SOUTH" then nextMap = 8 end
+		if direction == "EAST" then nextMap = 3 end
+		if direction == "WEST" then nextMap = 4 end
 	elseif currentMap == 6 then
+		if direction == "NORTH" then nextMap = 7 end
+		if direction == "SOUTH" then nextMap = 3 end
+		if direction == "EAST" then nextMap = 4 end
+		if direction == "WEST" then nextMap = 3 end
 	elseif currentMap == 7 then
+		if direction == "NORTH" then nextMap = 3 end
+		if direction == "SOUTH" then nextMap = 6 end
+		if direction == "EAST" then nextMap = 2 end
+		if direction == "WEST" then nextMap = 9 end
 	elseif currentMap == 8 then
+		if direction == "NORTH" then nextMap = 5 end
+		if direction == "SOUTH" then nextMap = 2 end
+		if direction == "EAST" then nextMap = 8 end
+		if direction == "WEST" then nextMap = 8 end
 	elseif currentMap == 9 then
+		if direction == "NORTH" then nextMap = 1 end
+		if direction == "SOUTH" then nextMap = 5 end
+		if direction == "EAST" then nextMap = 7 end
+		if direction == "WEST" then nextMap = 2 end
 	end
 
 	return nextMap
@@ -89,6 +121,7 @@ function game:update(dt)
 	map:update(dt)
 	if getTile(player:getXY()) == "EXIT" then
 		currentMap = newMap()
+		print("SWITCHING TO MAP #"..currentMap)
 	end
 	player:update(dt)
 end
