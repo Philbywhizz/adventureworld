@@ -110,3 +110,11 @@ monster = {
 	{name="The dark KING OF 'X'", hp=800, ac=3, xp=5}
 }
 
+food = {
+	{name="Food ration I (20 days)", value=25},
+	{name="Food ration II (60 days)", value=75},
+	{name="Healing Potion I", value=190},
+	{name="Healing Potion II", value=250},
+	{name="Healing Potion III", value=600},
+	{name="Healing Potion IV", value=700},
+}
