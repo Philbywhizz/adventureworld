@@ -60,16 +60,16 @@ function game:update(dt)
 end
 
 function game:keypressed(key)
-	if key == "a" then
+	if key == "a" or key == "up" then
 		-- up
 	end
-	if key == "z" then
+	if key == "z" or key == "down" then
 		-- down
 	end
-	if key == "," then
+	if key == "," or key == "left" then
 		-- left
 	end
-	if key == "." then
+	if key == "." or key == "right" then
 	end
 
 	if key == "h" then
