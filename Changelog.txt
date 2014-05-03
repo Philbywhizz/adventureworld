@@ -1,6 +1,12 @@
 Adventureworld Changelog
 ========================
 
+0.1
+---
+* Basic game states implemented
+* Random game map
+* Skeleton for movement
+
 0.0
 ---
 * Basic shell (just shows a blank screen).
