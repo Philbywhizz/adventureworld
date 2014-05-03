@@ -77,3 +77,36 @@ armour = {
 	{name="Full suit plate +7", ac=6, value=1900},
 	{name="Full suit plate +10", ac=3, value=2000}
 }
+
+monster = {
+	{name="A walking dead", hp=20, ac=29, xp=0.05},
+	{name="A demon", hp=20, ac=28, xp=0.05},
+	{name="A wild boar", hp=20, ac=27, xp=0.05},
+	{name="A ghoul", hp=25, ac=26, xp=0.05},
+	{name="A dark worm", hp=50, ac=23, xp=0.05},
+	{name="A skeletal vordak", hp=60, ac=19, xp=0.05},
+	{name="A thief", hp=90, ac=18, xp=0,05},
+	{name="A hobgoblin", hp=30, ac=25, xp=0.1},
+	{name="A giant dragonfly", hp=45, ac=24, xp=0.2},
+	{name="A black dragon", hp=75, ac=22, xp=0.2},
+	{name="An orge", hp=55, ac=21, xp=0.2},
+	{name="A tragg", hp=60, ac=20, xp=0.2},
+	{name="A many limbed beast", hp=95, ac=17, xp=0.2},
+	{name="A shadow being", hp=100, ac=17, xp=0.2},
+	{name="A fire beast", hp=150, ac=16, xp=0.2},
+	{name="A giant", hp=200, ac=15, xp=0.2},
+	{name="A hag", hp=220, ac=14, xp=0.2},
+	{name="A kraan", hp=225, ac=13, xp=0.2},
+	{name="A witch", hp=225, ac=12, xp=0.25},
+	{name="A bronze dragon", hp=230, ac=11, xp=0.25},
+	{name="A man spider", hp=235, ac=10, xp=0.25},
+	{name="A giant scorpion", hp=235, ac=9, xp=.25},
+	{name="A death knight", hp=240, ac=8, xp=.25},
+	{name="A living corpse", hp=300, ac=7, xp=.25},
+	{name="A savagely mad wolf", hp=350, ac=5, xp=0.25},
+	{name="A wizard", hp=400, ac=4, xp=0.25},
+	{name="A black cave goblin", hp=450, ac=3, xp=0.25},
+	{name="The dark prince of 'X'", hp=600, ac=2, xp=0.25},
+	{name="The dark KING OF 'X'", hp=800, ac=3, xp=5}
+}
+
