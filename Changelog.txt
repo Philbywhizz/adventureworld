@@ -1,6 +1,12 @@
 Adventureworld Changelog
 ========================
 
+0.2
+---
+* Movement is now working.
+* Maps are now linked together. You can leave the map and a new one is
+  displayed in its place.
+
 0.1
 ---
 * Basic game states implemented
