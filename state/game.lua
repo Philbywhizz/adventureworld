@@ -13,6 +13,7 @@ function game:init()
 		"123456789.,!?-+/():;%&`'*#=[]\"")
 
 	map = sti.new("maps/adventureworld")
+	currentMap = love.math.random(2, 9) -- map1 is special
 end
 
 function game:enter()
@@ -28,7 +29,7 @@ function game:draw()
 	love.graphics.setColor(255, 255, 255) -- white
 	center(10, "This is the game screen")
 
-	map:draw()
+	map:drawLayer(map.layers[currentMap])
 end
 
 function game:update(dt)
