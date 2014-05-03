@@ -50,8 +50,6 @@ end
 
 function game:draw()
 	love.graphics.setColor(255, 255, 255) -- white
-	center(10, "This is the game screen")
-
 	map:drawLayer(map.layers[currentMap])
 end
 
@@ -77,6 +75,9 @@ function game:keypressed(key)
 		Gamestate.push(help)
 	end
 
+	if key == "s" then
+		-- Show character record screen
+	end
 	if key == "1" then
 		-- debug
 		print("Player:")
