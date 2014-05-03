@@ -66,8 +66,30 @@ function game:draw()
 	player:draw()
 end
 
+function newMap()
+	-- First switch the player to the other side of the screen
+	local direction = player:flip()
+	print(direction)
+	nextMap = currentMap
+	-- This is messy
+	if currentMap == 2 then
+	elseif currentMap == 3 then
+	elseif currentMap == 4 then
+	elseif currentMap == 5 then
+	elseif currentMap == 6 then
+	elseif currentMap == 7 then
+	elseif currentMap == 8 then
+	elseif currentMap == 9 then
+	end
+
+	return nextMap
+end
+
 function game:update(dt)
 	map:update(dt)
+	if getTile(player:getXY()) == "EXIT" then
+		currentMap = newMap()
+	end
 	player:update(dt)
 end
 
@@ -92,7 +114,7 @@ function game:keypressed(key)
 	end
 	if key == "." or key == "right" then
 		if safeTile(player:getX() + 1, player:getY()) then
-			player:setXY(player:getX() + 1, player:getY())
+			player:setXY(player:getX() +  1, player:getY())
 		end
 	end
 

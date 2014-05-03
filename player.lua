@@ -41,6 +41,25 @@ function Player:getY()
 	return self.y
 end
 
+function Player:flip()
+	if self.x == 1 then
+		self.x = 63
+		return "WEST"
+	end
+	if self.x == 64 then
+		self.x = 2
+		return "EAST"
+	end
+	if self.y == 1 then
+		self.y = 14
+		return "NORTH"
+	end
+	if self.y == 15 then
+		self.y = 2
+		return "SOUTH"
+	end
+end
+
 function Player:update(dt)
 	-- flash the player if required
 	self.flash = self.flash + dt
