@@ -3,6 +3,8 @@
 --
 Gamestate = require "libs.hump.gamestate"
 
+require "data"
+
 require "state.instructions"
 require "state.title"
 require "state.help"
