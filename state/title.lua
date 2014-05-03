@@ -1,7 +1,6 @@
 --
 -- Title Screen
 --
-require "state.instructions"
 
 title = {}
 

@@ -40,6 +40,6 @@ end
 
 function instructions:keypressed(key)
 	if key then
-		-- switch to the start of the game
+		Gamestate.switch(help)
 	end
 end
