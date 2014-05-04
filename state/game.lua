@@ -65,7 +65,10 @@ function game:draw()
 	love.graphics.setFont(gameFont)
 	map:drawLayer(map.layers[currentMap])
 	player:draw()
-	love.graphics.print("FOOD = "..math.floor(player:getFood()).." Days", 0, love.graphics.getHeight() - 24)
+	if currentMap ~= 1 then
+		-- Food isn't important on map #1
+		love.graphics.print("FOOD = "..math.floor(player:getFood()).." Days", 0, love.graphics.getHeight() - 24)
+	end
 end
 
 function newMap()
@@ -135,14 +138,17 @@ function game:update(dt)
 		player:setXY(player:getX(), player:getY() + 1) -- move the player down 1
 	end
 	-- Calculate food every .5 seconds
-	if love.timer.getTime() - foodTimer > .5 then
-		if myTile == "WOODS" then player:eat(0.04) end
-		if myTile == "PATH" then player:eat(0.02) end
-		if myTile == "FOREST" then player:eat(0.1) end
-		if myTile == "HILLS" then player:eat(0.25) end
-		if myTile == "SWAMP" then player:eat(0.08) end
-		if myTile == "TOWN" then player:eat(1) end
-		foodTimer = love.timer.getTime()
+	if currentMap ~= 1 then
+		-- calculate food for all maps except #1
+		if love.timer.getTime() - foodTimer > .5 then
+			if myTile == "WOODS" then player:eat(0.04) end
+			if myTile == "PATH" then player:eat(0.02) end
+			if myTile == "FOREST" then player:eat(0.1) end
+			if myTile == "HILLS" then player:eat(0.25) end
+			if myTile == "SWAMP" then player:eat(0.08) end
+			if myTile == "TOWN" then player:eat(1) end
+			foodTimer = love.timer.getTime()
+		end
 	end
 	player:update(dt)
 end
