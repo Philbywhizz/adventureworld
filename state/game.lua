@@ -120,11 +120,12 @@ end
 
 function game:update(dt)
 	map:update(dt)
-	if getTile(player:getXY()) == "EXIT" then
+	local myTile = getTile(player:getXY())
+	if myTile == "EXIT" then
 		currentMap = newMap()
 	end
 	-- Gate test, only pass if king is defeated
-	if getTile(player:getXY()) == "GATE" and not player:isKing() then
+	if myTile == "GATE" and not player:isKing() then
 		Gamestate.push(Gate)
 		player:setXY(player:getX(), player:getY() + 1) -- move the player down 1
 	end
