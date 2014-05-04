@@ -13,6 +13,7 @@ require "state.game"
 require "state.instructions"
 require "state.title"
 require "state.help"
+require "state.charsheet"
 --
 -- Globals
 --

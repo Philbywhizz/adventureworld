@@ -20,3 +20,7 @@ This github repository in an attempt to bring the past into the future using mod
 # Instructions
 Escape key - quits the game (emergency exit).
 
+Arrows - move character around
+  or
+A Z - move up, down
+, . - move left, right

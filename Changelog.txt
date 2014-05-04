@@ -6,6 +6,7 @@ Adventureworld Changelog
 * Movement is now working.
 * Maps are now linked together. You can leave the map and a new one is
   displayed in its place.
+* Basic character sheet implemented. Is accessed by the 's' key from the game window
 
 0.1
 ---
