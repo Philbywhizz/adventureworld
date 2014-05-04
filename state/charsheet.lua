@@ -5,6 +5,10 @@
 charsheet = {}
 
 function charsheet:init()
+	charsheetFont = love.graphics.newImageFont("res/font.png",
+		" abcdefghijklmnopqrstuvwxyz" ..
+		"ABCDEFGHIJKLMNOPQRSTUVWXYZ0" ..
+		"123456789.,!?-+/():;%&`'*#=[]\"")
 end
 
 local function center(line, text)
@@ -13,7 +17,7 @@ end
 
 function charsheet:draw()
 	love.graphics.setColor(255, 255, 255) -- white
-	love.graphics.setFont(helpFont)
+	love.graphics.setFont(charsheetFont)
 	center(1, "**** Character Record ****")
 	center(3, "Name = "..player:getName())
 	center(4, "Level = "..player:getLevel())
