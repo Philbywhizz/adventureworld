@@ -84,7 +84,7 @@ function Player:getFood()
 end
 
 function Player:eat(noms)
-	self.food = self.food + noms
+	self.food = self.food - noms
 end
 
 function Player:getDays()
