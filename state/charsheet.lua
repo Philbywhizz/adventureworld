@@ -29,9 +29,9 @@ function charsheet:draw()
 	center(10, "Weapon = "..weapons[player:getWeapon()].name)
 	center(11, "Weapon strength = "..weapons[player:getWeapon()].strength)
 	center(12, "Armour class = "..armour[player:getArmour()].ac - 10)
-	center(13, "Health = "..player:getHealthPercent().."%")
-	center(14, "Food = "..player:getFood().." Days")
-	center(15, "Days taken = "..player:getDays())
+	center(13, "Health = "..math.floor(player:getHealthPercent()).."%")
+	center(14, "Food = "..math.floor(player:getFood()).." Days")
+	center(15, "Days taken = "..math.floor(player:getDays()))
 	center(20, "Press any key to continue")
 end
 
