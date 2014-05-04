@@ -2,10 +2,10 @@
 -- Character Sheet
 --
 
-charsheet = {}
+Charsheet = {}
 
-function charsheet:init()
-	charsheetFont = love.graphics.newImageFont("res/font.png",
+function Charsheet:init()
+	CharsheetFont = love.graphics.newImageFont("res/font.png",
 		" abcdefghijklmnopqrstuvwxyz" ..
 		"ABCDEFGHIJKLMNOPQRSTUVWXYZ0" ..
 		"123456789.,!?-+/():;%&`'*#=[]\"")
@@ -15,9 +15,9 @@ local function center(line, text)
 	love.graphics.printf(text, 0, 0 + (24 * line), love.graphics.getWidth(), "center")
 end
 
-function charsheet:draw()
+function Charsheet:draw()
 	love.graphics.setColor(255, 255, 255) -- white
-	love.graphics.setFont(charsheetFont)
+	love.graphics.setFont(CharsheetFont)
 	center(1, "**** Character Record ****")
 	center(3, "Name = "..player:getName())
 	center(4, "Level = "..player:getLevel())
@@ -35,10 +35,10 @@ function charsheet:draw()
 	center(20, "Press any key to continue")
 end
 
-function charsheet:update(dt)
+function Charsheet:update(dt)
 end
 
-function charsheet:keypressed(key)
+function Charsheet:keypressed(key)
 	if key then
 		Gamestate.pop()
 	end

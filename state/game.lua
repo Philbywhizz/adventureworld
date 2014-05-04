@@ -179,7 +179,7 @@ function game:keypressed(key)
 
 	if key == "s" then
 		-- Show character record screen
-		Gamestate.push(charsheet)
+		Gamestate.push(Charsheet)
 	end
 	if key == "1" then
 		-- debug
