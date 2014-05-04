@@ -62,8 +62,10 @@ end
 
 function game:draw()
 	love.graphics.setColor(255, 255, 255) -- white
+	love.graphics.setFont(gameFont)
 	map:drawLayer(map.layers[currentMap])
 	player:draw()
+	love.graphics.print("FOOD = "..player:getFood().." Days", 0, love.graphics.getHeight() - 24)
 end
 
 function newMap()
