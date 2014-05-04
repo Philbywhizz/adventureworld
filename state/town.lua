@@ -28,7 +28,6 @@ function Town:draw()
 	center(13, "[5]  SHOW CHARACTER")
 	center(14, "[6]  HELP")
 	center(16, "[0]  EXIT TOWN")
-	center(20, "Press any key to continue")
 end
 
 function Town:update(dt)
