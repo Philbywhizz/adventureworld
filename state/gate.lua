@@ -31,7 +31,6 @@ end
 function Gate:keypressed(key)
 	if key then
 		Gamestate.pop()
-		print("KEY")
 	end
 end
 
