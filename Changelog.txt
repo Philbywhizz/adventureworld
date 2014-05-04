@@ -10,6 +10,7 @@ Adventureworld Changelog
   the game window
 * Castle gate is now closed until you defeat the Dark King
   (debug key: 2 to simulate dark king death)
+* Food is now consumed, the rate depending on the terrain you are on
 
 0.1
 ---
