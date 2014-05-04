@@ -87,7 +87,7 @@ function newMap()
 		if direction == "EAST" then nextMap = 5 end
 		if direction == "WEST" then nextMap = 6 end
 	elseif currentMap == 5 then
-		if direction == "NORTH" then nextMap = 4 end
+		if direction == "NORTH" then nextMap = 9 end
 		if direction == "SOUTH" then nextMap = 8 end
 		if direction == "EAST" then nextMap = 3 end
 		if direction == "WEST" then nextMap = 4 end
