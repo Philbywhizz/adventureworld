@@ -192,4 +192,8 @@ function game:keypressed(key)
 		player:makeKing()
 		print("DEBUG: Kingmaker!")
 	end
+	if key == "3" then
+		-- Force a town state
+		Gamestate.push(Town)
+	end
 end
