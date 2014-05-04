@@ -124,6 +124,11 @@ function game:update(dt)
 	if myTile == "EXIT" then
 		currentMap = newMap()
 	end
+	-- Town test
+	if myTile == "TOWN" then
+		Gamestate.push(Town)
+		player:setXY(player:getX(), player:getY() + 1) -- move the player down 1
+	end
 	-- Gate test, only pass if king is defeated
 	if myTile == "GATE" and not player:isKing() then
 		Gamestate.push(Gate)

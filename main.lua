@@ -15,6 +15,8 @@ require "state.title"
 require "state.help"
 require "state.charsheet"
 require "state.gate"
+require "state.town"
+
 --
 -- Globals
 --
