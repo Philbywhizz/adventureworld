@@ -164,4 +164,8 @@ function game:keypressed(key)
 		print("- Current Tile:"..getTile(player:getXY()))
 		print("- Current Map #"..currentMap)
 	end
+	if key == "2" then
+		-- make the player the king
+		player:makeKing()
+	end
 end

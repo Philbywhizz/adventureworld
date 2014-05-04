@@ -32,6 +32,7 @@ function Player:init()
 	self.weapon = 1
 	self.food = 20
 	self.days = 0
+	self.king = false
 end
 
 function Player:getName()
@@ -44,6 +45,14 @@ function Player:getLevel()
 	else
 		return self.level
 	end
+end
+
+function Player:isKing()
+	return self.king
+end
+
+function Player:makeKing()
+	self.king = true
 end
 
 function Player:getScore()
