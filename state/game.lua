@@ -121,6 +121,11 @@ function game:update(dt)
 	if getTile(player:getXY()) == "EXIT" then
 		currentMap = newMap()
 	end
+	-- Gate test, only pass if king is defeated
+	if getTile(player:getXY()) == "GATE" and not player:isKing() then
+		Gamestate.push(Gate)
+		player:setXY(player:getX(), player:getY() + 1) -- move the player down 1
+	end
 	player:update(dt)
 end
 
@@ -163,5 +168,10 @@ function game:keypressed(key)
 		print("DEBUG:")
 		print("- Current Tile:"..getTile(player:getXY()))
 		print("- Current Map #"..currentMap)
+	end
+	if key == "2" then
+		-- make the player the king
+		player:makeKing()
+		print("DEBUG: Kingmaker!")
 	end
 end
