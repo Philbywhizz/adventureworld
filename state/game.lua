@@ -7,7 +7,7 @@ require "player"
 game = {}
 
 local sti = require "libs.sti"
-
+local foodTimer = love.timer.getTime()
 player = Player()
 
 function game:init()
@@ -62,8 +62,10 @@ end
 
 function game:draw()
 	love.graphics.setColor(255, 255, 255) -- white
+	love.graphics.setFont(gameFont)
 	map:drawLayer(map.layers[currentMap])
 	player:draw()
+	love.graphics.print("FOOD = "..math.floor(player:getFood()).." Days", 0, love.graphics.getHeight() - 24)
 end
 
 function newMap()
@@ -118,13 +120,24 @@ end
 
 function game:update(dt)
 	map:update(dt)
-	if getTile(player:getXY()) == "EXIT" then
+	local myTile = getTile(player:getXY())
+	if myTile == "EXIT" then
 		currentMap = newMap()
 	end
 	-- Gate test, only pass if king is defeated
-	if getTile(player:getXY()) == "GATE" and not player:isKing() then
+	if myTile == "GATE" and not player:isKing() then
 		Gamestate.push(Gate)
 		player:setXY(player:getX(), player:getY() + 1) -- move the player down 1
+	end
+	-- Calculate food every .5 seconds
+	if love.timer.getTime() - foodTimer > .5 then
+		if myTile == "WOODS" then player:eat(0.04) end
+		if myTile == "PATH" then player:eat(0.02) end
+		if myTile == "FOREST" then player:eat(0.1) end
+		if myTile == "HILLS" then player:eat(0.25) end
+		if myTile == "SWAMP" then player:eat(0.08) end
+		if myTile == "TOWN" then player:eat(1) end
+		foodTimer = love.timer.getTime()
 	end
 	player:update(dt)
 end
