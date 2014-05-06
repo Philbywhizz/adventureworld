@@ -35,7 +35,7 @@ end
 
 function Town:keypressed(key)
 	if key == "5" then
-		Gamestate.push(charsheet)
+		Gamestate.push(Charsheet)
 	end
 	if key == "6" then
 		Gamestate.push(help)
