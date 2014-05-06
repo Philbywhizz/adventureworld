@@ -179,7 +179,7 @@ function game:keypressed(key)
 		end
 	end
 
-	if key == "h" then
+	if key == "h" or key == "/" then
 		-- Help screen
 		Gamestate.push(help)
 	end

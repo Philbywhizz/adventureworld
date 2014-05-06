@@ -27,7 +27,7 @@ function help:draw()
 	center(9, "(you can also use the arrow keys)")
 	center(11, "Other Controls:")
 	center(13, "'S' - Show character sheet")
-	center(14, "'H' - This Help screen")
+	center(14, "'H' or '?' - This Help screen")
 	center(20, "Press any key to continue")
 end
 
