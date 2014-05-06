@@ -67,7 +67,8 @@ function game:draw()
 	player:draw()
 	if currentMap ~= 1 then
 		-- Food isn't important on map #1
-		love.graphics.print("FOOD = "..math.floor(player:getFood()).." Days", 0, love.graphics.getHeight() - 24)
+		love.graphics.print("FOOD = "..math.floor(player:getFood()).." Days", 0, love.graphics.getHeight() - 32)
+		love.graphics.print("TERRAIN = "..getTile(player:getXY()), 0, love.graphics.getHeight() - 16)
 	end
 end
 
