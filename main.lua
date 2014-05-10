@@ -8,7 +8,6 @@ Gamestate = require "libs.hump.gamestate"
 lovebird = require "libs.lovebird"
 inspect = require "libs.inspect"
 require "data"
-
 require "state.game"
 require "state.instructions"
 require "state.title"
