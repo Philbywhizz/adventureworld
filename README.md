@@ -24,3 +24,5 @@ Arrows - move character around
   or
 A Z - move up, down
 , . - move left, right
+H - Help screen
+S - Character sheet
