@@ -11,9 +11,9 @@ The original Adventureworld was only ever played with a small group of friends d
 Sadly the original disk with the data has probably been lost to time (even if I had the disk I have no way of reading the data back). The only known copy of the original source of Adventureworld is a computer printout with hand written notes scrawled along the side for comments. The printout is also starting turn yellow and getting that old manualscript smell too. So perhaps it is time to resurrect it
 
 ## Adventureworld begins.. again
-Now after 20 years, I'm attempting to bring the past into the future using modern graphics and processing power, but still retaining the old classic 'green screen' feel and beeps that the original Microbee had.
+Now after 26 years, I'm attempting to bring the past into the future using modern graphics and processing power, but still retaining the old classic 'green screen' feel and beeps that the original Microbee had.
 
-I am currently re-coding Adventureworld in lua using the [LÖVE Engine](http://www.love2d.org), as it will allow me to easily deploy Adventureworld to multiple platforms.
+I am currently re-coding Adventureworld using the [Godot Engine](http://www.godotengine.org), as it will allow me to easily deploy Adventureworld to multiple platforms.
 
 This github repository in an attempt to bring the past into the future using modern graphics and processing power, but attempt to retain the old classic 'green screen' and beeps that the original Microbee had.
 
