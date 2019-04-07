@@ -1,6 +1,17 @@
 Adventureworld Changelog
 ========================
 
+0.2
+---
+* Movement is now working.
+* Maps are now linked together. You can leave the map and a new one is
+  displayed in its place.
+* Basic character sheet implemented. Is accessed by the 's' key from
+  the game window
+* Castle gate is now closed until you defeat the Dark King
+  (debug key: 2 to simulate dark king death)
+* Food is now consumed, the rate depending on the terrain you are on
+
 0.1
 ---
 * Basic game states implemented

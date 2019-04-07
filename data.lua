@@ -1,7 +1,7 @@
 --
 -- Game Data
 --
-ranks = {
+titles = {
 	"Serf",
 	"Greenhorn",
 	"Amateur",
@@ -35,7 +35,7 @@ ranks = {
 }
 
 weapons = {
-	{name="Bare hands", strenth=1, value=0},
+	{name="Bare hands", strength=1, value=0},
 	{name="Dagger", strength=2, value=100},
 	{name="Knife", strength=3, value=200},
 	{name="Axe", strength=4, value=300},
